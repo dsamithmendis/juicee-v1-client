@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <section className="mt-10 bg-[#fff7ee] text-gray-800">
+    <section className="mt-10 text-gray-800">
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
