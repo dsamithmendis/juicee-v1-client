@@ -80,7 +80,12 @@ const HomePage = () => {
           {/* Right Group: Cards */}
           <div className="flex flex-wrap gap-4 justify-end w-5/7">
             {fruits.map((fruit, i) => (
-              <div key={i} className="w-2/7">
+              <div
+                key={i}
+                className={`w-2/7 ${
+                  i === 1 ? "relative mt-32" : ""
+                }`}
+              >
                 <FruitCard img={fruit.img} name={fruit.name} />
               </div>
             ))}
