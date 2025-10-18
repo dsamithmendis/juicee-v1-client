@@ -23,7 +23,7 @@ const juices = [
 
 export default function MenuSection() {
   return (
-    <section>
+    <section className="w-full mt-10">
       <h1 className="text-4xl font-extrabold text-gray-800 mb-10">
         Explore Best <br className="hidden md:block" />
         Menu Selections
