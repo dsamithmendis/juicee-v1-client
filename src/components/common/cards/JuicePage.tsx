@@ -25,7 +25,7 @@ const juices = [
 ];
 
 const JuicePage = () => (
-  <div className="bg-gradient-to-br from-pink-100 to-pink-300 min-h-screen p-6">
+  <div className="min-h-screen p-6">
     <h1 className="text-3xl font-bold text-center text-pink-700 mb-8">
       Explore Best Menu Selections
     </h1>
@@ -38,7 +38,7 @@ const JuicePage = () => (
 
     <div className="grid md:grid-cols-2 gap-6 mb-12">
       <ContactForm />
-      <div className="bg-pink-500 rounded-lg p-6">
+      <div className="rounded-lg p-6">
         <Sitemap />
         <div className="mt-6 text-white">
           <p>📞 +491723490698</p>

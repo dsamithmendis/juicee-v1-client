@@ -11,7 +11,7 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#fff7ee] to-[#fcdcc9] text-gray-800">
+    <div className="w-full text-gray-800">
       {/* Hero Section */}
       <section className="flex flex-col lg:flex-row justify-between items-center px-10 lg:px-20 py-12">
         <div className="max-w-xl space-y-5">

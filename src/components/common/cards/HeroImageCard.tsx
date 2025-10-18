@@ -16,7 +16,13 @@ const HeroImageCard = ({
 }: HeroImageCardProps) => {
   return (
     <div className="rounded-3xl overflow-hidden drop-shadow-2xl">
-      <Image src={src} alt={alt} width={width} height={height} className="object-cover" />
+      <Image
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        className="object-cover"
+      />
     </div>
   );
 };
