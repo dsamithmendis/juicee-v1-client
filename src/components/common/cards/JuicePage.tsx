@@ -25,9 +25,10 @@ const juices = [
 ];
 
 const JuicePage = () => (
-  <div className="min-h-screen">
-    <h1 className="text-3xl font-bold text-center text-pink-700 mb-8">
-      Explore Best Menu Selections
+  <div className="mt-10 min-h-screen">
+    <h1 className="text-4xl font-extrabold text-gray-800 mb-10">
+      Explore Best <br className="hidden md:block" />
+      Menu Selections
     </h1>
 
     <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -57,8 +58,8 @@ const JuicePage = () => (
           height={1200}
         />
         <div className="mt-4 text-gray-800 text-center space-y-4">
-          <p>📞 +491723490698</p>
-          <p>📧 abc@gmail.com</p>
+          <p>📞 +123 456 789 000</p>
+          <p>📧 email@email.me</p>
         </div>
       </div>
     </div>

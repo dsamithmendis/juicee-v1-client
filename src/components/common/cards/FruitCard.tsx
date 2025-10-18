@@ -8,12 +8,12 @@ interface FruitCardProps {
 
 const FruitCard = ({ img, name }: FruitCardProps) => {
   return (
-    <div className="rounded-2xl h-72 w-full flex flex-col items-center justify-center shadow-2xl hover:shadow-md transition">
+    <div className="rounded-2xl p-4 md:h-72 w-full flex flex-col items-center justify-center shadow-2xl hover:shadow-md transition">
       <Image
         src={img}
         alt={name}
-        width={100}
-        height={100}
+        width={1200}
+        height={1200}
         className="rounded-full"
       />
     </div>
