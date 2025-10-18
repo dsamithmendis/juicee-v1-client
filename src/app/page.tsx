@@ -16,7 +16,13 @@ const HomePage = () => {
       {/* Navbar */}
       <nav className="flex justify-between items-center px-10 py-6">
         <div className="flex items-center gap-2">
-          <Image src="/images/1.png" alt="logo" width={32} height={32} className="rounded-full" />
+          <Image
+            src="/images/1.png"
+            alt="logo"
+            width={32}
+            height={32}
+            className="rounded-full"
+          />
           <span className="font-bold text-lg">Fruity</span>
         </div>
         <ul className="flex gap-8 text-sm font-medium">
@@ -58,17 +64,27 @@ const HomePage = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="px-10 lg:px-20 py-16">
-        <h2 className="text-3xl font-bold mb-4">Why you should choose us?</h2>
-        <p className="max-w-md text-gray-600 mb-10">
-          Our commitment to excellence in the realm of juices sets us apart from
-          the competition.
-        </p>
+      <section className="w-full px-10 lg:px-20 py-16">
+        <div className="flex justify-between items-start w-full">
+          {/* Left Group: Text */}
+          <div className="flex-shrink-0 w-2/7">
+            <h2 className="text-3xl font-bold mb-2">
+              Why you should choose us?
+            </h2>
+            <p className="text-gray-600">
+              Our commitment to excellence in the realm of juices sets us apart
+              from the competition.
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-          {fruits.map((fruit, i) => (
-            <FruitCard key={i} img={fruit.img} name={fruit.name} />
-          ))}
+          {/* Right Group: Cards */}
+          <div className="flex flex-wrap gap-4 justify-end w-5/7">
+            {fruits.map((fruit, i) => (
+              <div key={i} className="w-2/7">
+                <FruitCard img={fruit.img} name={fruit.name} />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
