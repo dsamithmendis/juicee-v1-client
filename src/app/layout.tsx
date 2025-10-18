@@ -5,8 +5,8 @@ import Footer from "@/components/common/footer";
 import Container from "@/components/ui/container";
 
 export const metadata: Metadata = {
-  title: "Juciee",
-  description: "Juciee for all your juicy needs.",
+  title: "Juicee",
+  description: "Juicee for all your juicy needs.",
 };
 
 export default function RootLayout({
