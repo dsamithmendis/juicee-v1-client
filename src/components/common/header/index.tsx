@@ -13,7 +13,7 @@ export default function Header() {
             height={32}
             className="rounded-full"
           />
-          <span className="font-extrabold text-2xl">JUCIEE</span>
+          <span className="font-extrabold text-2xl">JUICEE</span>
         </div>
 
         {/* Menu */}

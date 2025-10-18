@@ -21,11 +21,7 @@ export default function HeroSection() {
           </button>
         </div>
       </div>
-
-      {/* Hero Image Card */}
-      <div className="">
-        <HeroImageCard src="/images/1.png" alt="Juice glass" />
-      </div>
+      <HeroImageCard src="/images/1.png" alt="Juice glass" />
     </section>
   );
 }
