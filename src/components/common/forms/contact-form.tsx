@@ -18,7 +18,7 @@ const ContactForm = () => (
     />
     <button
       type="submit"
-      className="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600"
+      className="bg-pink-700 text-white w-full px-5 py-2 rounded-2xl hover:bg-pink-600"
     >
       Submit
     </button>
