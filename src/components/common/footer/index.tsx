@@ -24,7 +24,7 @@ const juices = [
 ];
 
 const Footer = () => (
-  <section className="mt-10 min-h-screen">
+  <section className="w-full mt-10">
     <h1 className="text-4xl font-extrabold text-gray-800 mb-10">
       Explore Best <br className="hidden md:block" />
       Menu Selections
@@ -37,27 +37,25 @@ const Footer = () => (
     </div>
 
     <div className="grid md:grid-cols-4 gap-6 mb-12">
-      <div className="col-span-1">
+      <div className="md:col-span-1">
         <ContactForm />
       </div>
 
-      <div className="col-span-2">
+      <div className="md:col-span-2">
         <div className="space-y-4 text-gray-800 items-center text-center">
           <h2 className="text-4xl font-extrabold">Sitemap</h2>
           <p className="text-gray-600">Easy Access</p>
           <ul className="space-y-4">
-            {["About Us", "Services", "Blog"].map(
-              (item) => (
-                <li key={item} className="hover:underline cursor-pointer">
-                  {item}
-                </li>
-              )
-            )}
+            {["About Us", "Services", "Blog"].map((item) => (
+              <li key={item} className="hover:underline cursor-pointer">
+                {item}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
 
-      <div className="col-span-1 flex flex-col items-center justify-start p-4">
+      <div className="md:col-span-1 flex flex-col items-center justify-start p-4">
         <Image
           src="/images/1.png"
           alt="Strawberry"

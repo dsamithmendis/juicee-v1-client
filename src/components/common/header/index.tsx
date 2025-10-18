@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { RiMenuLine } from "@remixicon/react";
+import { RiMenuLine, RiCloseLine } from "@remixicon/react";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,7 +10,6 @@ export default function Header() {
   return (
     <section className="mt-10 text-gray-800">
       <div className="flex justify-between items-center">
-
         <div className="flex items-center gap-2">
           <Image
             src="/images/1.png"
@@ -26,7 +25,7 @@ export default function Header() {
           <li className="hover:text-pink-600 cursor-pointer">Home</li>
           <li className="hover:text-pink-600 cursor-pointer">Menu</li>
           <li className="hover:text-pink-600 cursor-pointer">Features</li>
-          <li className="hover:text-pink-600 cursor-pointer">Contact</li>
+          <li className="hover:text-pink-600 cursor-pointer">Contact Us</li>
         </ul>
 
         <button className="hidden md:block border border-gray-700 px-4 py-2 rounded-lg hover:bg-gray-800 hover:text-white transition">
@@ -37,18 +36,30 @@ export default function Header() {
           className="md:hidden text-2xl"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <RiMenuLine className="hover:text-pink-700 cursor-pointer"/>
+          {menuOpen ? (
+            <RiCloseLine className="hover:text-pink-700 cursor-pointer" />
+          ) : (
+            <RiMenuLine className="hover:text-pink-700 cursor-pointer" />
+          )}
         </button>
       </div>
 
       {menuOpen && (
-        <ul className="flex flex-col mt-4 gap-4 md:hidden text-sm font-medium">
-          <li className="hover:text-pink-600 cursor-pointer">Home</li>
-          <li className="hover:text-pink-600 cursor-pointer">Menu</li>
-          <li className="hover:text-pink-600 cursor-pointer">Features</li>
-          <li className="hover:text-pink-600 cursor-pointer">Contact</li>
+        <ul className="text-center flex flex-col mt-4 md:hidden text-sm font-medium">
+          <li className="px-4 py-2 rounded-lg hover:opacity-80 hover:border border-gray-700 hover:text-pink-600 cursor-pointer">
+            Home
+          </li>
+          <li className="px-4 py-2 rounded-lg hover:opacity-80 hover:border border-gray-700 hover:text-pink-600 cursor-pointer">
+            Menu
+          </li>
+          <li className="px-4 py-2 rounded-lg hover:opacity-80 hover:border border-gray-700 hover:text-pink-600 cursor-pointer">
+            Features
+          </li>
+          <li className="px-4 py-2 rounded-lg hover:opacity-80 hover:border border-gray-700 hover:text-pink-600 cursor-pointer">
+            Contact Us
+          </li>
           <li>
-            <button className="w-full text-left border border-gray-700 px-4 py-2 rounded-lg hover:bg-gray-800 hover:text-white transition">
+            <button className="cursor-pointer text-center w-full border border-gray-700 px-4 mt-4 py-2 rounded-lg hover:bg-gray-800 hover:text-white transition">
               Sign Up
             </button>
           </li>
