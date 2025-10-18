@@ -2,7 +2,7 @@ import HeroImageCard from "@/components/common/cards/hero-image-card";
 
 export default function HeroSection() {
   return (
-    <section className="mt-10 flex flex-col lg:flex-row justify-between items-center">
+    <section className="mt-10 flex flex-col md:flex-row justify-between items-center">
       <div className="max-w-xl space-y-5">
         <h1 className="max-w-2xl text-5xl font-extrabold leading-tight text-gray-900">
           Revitalize Your Routing, <br />
@@ -21,7 +21,7 @@ export default function HeroSection() {
           </button>
         </div>
       </div>
-      <HeroImageCard src="/images/1.png" alt="Juice glass" />
+      <HeroImageCard src="/images/1.png" alt="Hero Image" />
     </section>
   );
 }

@@ -15,7 +15,7 @@ const HeroImageCard = ({
   height = 400,
 }: HeroImageCardProps) => {
   return (
-    <div className="overflow-hidden drop-shadow-2xl">
+    <div className="overflow-hidden">
       <Image
         src={src}
         alt={alt}
