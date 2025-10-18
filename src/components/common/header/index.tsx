@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <div className="bg-[#fff7ee] text-black">
+    <section className="mt-10 bg-[#fff7ee] text-gray-800">
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
@@ -13,7 +13,7 @@ export default function Header() {
             height={32}
             className="rounded-full"
           />
-          <span className="font-bold text-lg">Fruity</span>
+          <span className="font-extrabold text-2xl">JUCIEE</span>
         </div>
 
         {/* Menu */}
@@ -29,6 +29,6 @@ export default function Header() {
           Sign Up
         </button>
       </div>
-    </div>
+    </section>
   );
 }
