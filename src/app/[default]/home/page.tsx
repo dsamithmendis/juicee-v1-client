@@ -10,7 +10,7 @@ const HomePage = () => {
       <nav className="flex justify-between items-center px-10 py-6">
         <div className="flex items-center gap-2">
           <Image
-            src="/strawberry.png"
+            src="/images/1.png"
             alt="logo"
             width={32}
             height={32}
@@ -52,7 +52,7 @@ const HomePage = () => {
 
         <div className="mt-10 lg:mt-0">
           <Image
-            src="/juice-glass.png"
+            src="/images/1.png"
             alt="Juice glass"
             width={400}
             height={400}
@@ -71,9 +71,9 @@ const HomePage = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {[
-            { img: "/mango.png", name: "Mango" },
-            { img: "/blueberry.png", name: "Blueberry" },
-            { img: "/pistachio.png", name: "Pistachio" },
+            { img: "/images/1.png", name: "Mango" },
+            { img: "/images/1.png", name: "Blueberry" },
+            { img: "/images/1.png", name: "Pistachio" },
           ].map((item, i) => (
             <div
               key={i}
