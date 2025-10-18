@@ -37,9 +37,9 @@ export default function Header() {
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? (
-            <RiCloseLine className="hover:text-pink-700 cursor-pointer" />
+            <RiCloseLine className="hover:text-pink-600 cursor-pointer" />
           ) : (
-            <RiMenuLine className="hover:text-pink-700 cursor-pointer" />
+            <RiMenuLine className="hover:text-pink-600 cursor-pointer" />
           )}
         </button>
       </div>
