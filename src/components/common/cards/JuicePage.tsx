@@ -1,5 +1,5 @@
 import JuiceCard from "./JuiceCard";
-import ContactForm from "./ContactForm";
+import ContactForm from "./contact-form";
 import Sitemap from "./Sitemap";
 import Image from "next/image";
 
@@ -25,7 +25,7 @@ const juices = [
 ];
 
 const JuicePage = () => (
-  <div className="min-h-screen p-6">
+  <div className="min-h-screen">
     <h1 className="text-3xl font-bold text-center text-pink-700 mb-8">
       Explore Best Menu Selections
     </h1>
@@ -36,21 +36,30 @@ const JuicePage = () => (
       ))}
     </div>
 
-    <div className="grid md:grid-cols-2 gap-6 mb-12">
-      <ContactForm />
-      <div className="rounded-lg p-6">
+    <div className="grid md:grid-cols-4 gap-6 mb-12">
+      {/* Left Column: Contact Form */}
+      <div className="col-span-1">
+        <ContactForm />
+      </div>
+
+      {/* Middle Column: Sitemap */}
+      <div className="col-span-2">
         <Sitemap />
-        <div className="mt-6 text-white">
-          <p>📞 +491723490698</p>
-          <p>📧 abc@gmail.com</p>
-        </div>
+      </div>
+
+      {/* Right Column: Image + Contact Info */}
+      <div className="col-span-1 flex flex-col items-center justify-start p-4">
         <Image
           src="/images/1.png"
           alt="Strawberry"
-          className="w-16 mt-4"
-          width={64}
-          height={64}
+          className="w-full h-auto rounded-md"
+          width={1200}
+          height={1200}
         />
+        <div className="mt-4 text-gray-800 text-center space-y-4">
+          <p>📞 +491723490698</p>
+          <p>📧 abc@gmail.com</p>
+        </div>
       </div>
     </div>
   </div>
