@@ -1,41 +1,15 @@
-import JuiceCard from "@/components/common/cards/juice-card";
 import ContactForm from "@/components/common/forms/contact-form";
 import Image from "next/image";
-
-const juices = [
-  {
-    name: "Red Dragon Fruit Juice",
-    description: "Fresh Dragon fruit with a splash of ice.",
-    price: "180",
-    imageSrc: "/images/1.png",
-  },
-  {
-    name: "Pine Apple Fruit Juice",
-    description: "Creamy blend of ripe pine.",
-    price: "120",
-    imageSrc: "/images/1.png",
-  },
-  {
-    name: "Avocado Juice",
-    description: "Enriched with natural flavors for a healthy start.",
-    price: "140",
-    imageSrc: "/images/1.png",
-  },
-];
+import {
+  RiFacebookCircleFill,
+  RiInstagramFill,
+  RiTwitterXFill,
+  RiYoutubeFill,
+} from "@remixicon/react";
+import Link from "next/link";
 
 const Footer = () => (
   <section className="w-full mt-10">
-    <h1 className="text-4xl font-extrabold text-gray-800 mb-10">
-      Explore Best <br className="hidden md:block" />
-      Menu Selections
-    </h1>
-
-    <div className="grid md:grid-cols-3 gap-6 mb-12">
-      {juices.map((juice) => (
-        <JuiceCard key={juice.name} {...juice} />
-      ))}
-    </div>
-
     <div className="grid md:grid-cols-4 gap-6 mb-12">
       <div className="md:col-span-1">
         <ContactForm />
@@ -66,9 +40,41 @@ const Footer = () => (
         <div className="mt-4 text-gray-800 text-center space-y-4">
           <p>📞 +123 456 789 000</p>
           <p>📧 email@email.me</p>
+
+          <div className="flex justify-center gap-4 mt-4">
+            <Link
+              href="#"
+              className="hover:text-pink-600 transition-colors duration-300"
+              aria-label="Instagram"
+            >
+              <RiInstagramFill size={28} />
+            </Link>
+            <Link
+              href="#"
+              className="hover:text-blue-600 transition-colors duration-300"
+              aria-label="Facebook"
+            >
+              <RiFacebookCircleFill size={28} />
+            </Link>
+            <Link
+              href="#"
+              className="hover:text-gray-800 transition-colors duration-300"
+              aria-label="Twitter"
+            >
+              <RiTwitterXFill size={28} />
+            </Link>
+            <Link
+              href="#"
+              className="hover:text-red-700 transition-colors duration-300"
+              aria-label="Youtube"
+            >
+              <RiYoutubeFill size={28} />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
+
     <div className="text-center text-gray-800 my-5">
       © 2025 | All rights reserved.
     </div>
