@@ -1,21 +1,22 @@
-"use client";
 import JuicePage from "@/components/common/cards/JuicePage";
+import HeroImageCard from "@/components/common/cards/HeroImageCard";
+import FruitCard from "@/components/common/cards/FruitCard";
 import Image from "next/image";
 import React from "react";
 
 const HomePage = () => {
+  const fruits = [
+    { img: "/images/1.png", name: "Mango" },
+    { img: "/images/1.png", name: "Blueberry" },
+    { img: "/images/1.png", name: "Pistachio" },
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#fff7ee] to-[#fcdcc9] text-gray-800">
       {/* Navbar */}
       <nav className="flex justify-between items-center px-10 py-6">
         <div className="flex items-center gap-2">
-          <Image
-            src="/images/1.png"
-            alt="logo"
-            width={32}
-            height={32}
-            className="rounded-full"
-          />
+          <Image src="/images/1.png" alt="logo" width={32} height={32} className="rounded-full" />
           <span className="font-bold text-lg">Fruity</span>
         </div>
         <ul className="flex gap-8 text-sm font-medium">
@@ -50,14 +51,9 @@ const HomePage = () => {
           </div>
         </div>
 
+        {/* Hero Image Card */}
         <div className="mt-10 lg:mt-0">
-          <Image
-            src="/images/1.png"
-            alt="Juice glass"
-            width={400}
-            height={400}
-            className="drop-shadow-2xl"
-          />
+          <HeroImageCard src="/images/1.png" alt="Juice glass" />
         </div>
       </section>
 
@@ -70,26 +66,12 @@ const HomePage = () => {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-          {[
-            { img: "/images/1.png", name: "Mango" },
-            { img: "/images/1.png", name: "Blueberry" },
-            { img: "/images/1.png", name: "Pistachio" },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="bg-[#ffdbd2] rounded-2xl p-6 flex justify-center shadow-md hover:shadow-lg transition"
-            >
-              <Image
-                src={item.img}
-                alt={item.name}
-                width={100}
-                height={100}
-                className="rounded-full"
-              />
-            </div>
+          {fruits.map((fruit, i) => (
+            <FruitCard key={i} img={fruit.img} name={fruit.name} />
           ))}
         </div>
       </section>
+
       <JuicePage />
     </div>
   );
