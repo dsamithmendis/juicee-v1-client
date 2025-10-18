@@ -2,9 +2,9 @@ import FruitCard from "@/components/common/cards/fruit-card";
 
 const WhyChooseUsSection = () => {
   const fruits = [
-    { img: "/images/1.png", name: "Mango" },
-    { img: "/images/1.png", name: "Blueberry" },
-    { img: "/images/1.png", name: "Pistachio" },
+    { img: "/images/5.png", name: "Apple" },
+    { img: "/images/6.png", name: "Orange" },
+    { img: "/images/7.png", name: "Mango" },
   ];
 
   return (
