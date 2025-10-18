@@ -7,19 +7,19 @@ const juices = [
   {
     name: "Red Dragon Fruit Juice",
     description: "Fresh Dragon fruit with a splash of ice.",
-    price: "Rs.180/-",
+    price: "180",
     imageSrc: "/images/1.png",
   },
   {
     name: "Pine Apple Fruit Juice",
     description: "Creamy blend of ripe pine.",
-    price: "Rs.120/-",
+    price: "120",
     imageSrc: "/images/1.png",
   },
   {
     name: "Avocado Juice",
     description: "Enriched with natural flavors for a healthy start.",
-    price: "Rs.140/-",
+    price: "140",
     imageSrc: "/images/1.png",
   },
 ];
