@@ -14,7 +14,7 @@ const FruitCard = ({ img, name }: FruitCardProps) => {
         alt={name}
         width={1200}
         height={1200}
-        className="rounded-full"
+        className="object-cover rounded-2xl"
       />
     </div>
   );
