@@ -8,13 +8,13 @@ interface JuiceCardProps {
 }
 
 const JuiceCard = ({ name, description, price, imageSrc }: JuiceCardProps) => (
-  <div className="rounded-2xl shadow-2xl p-8 shadow-2xl hover:shadow-md transition">
+  <div className="rounded-2xl shadow-2xl p-8 shadow-2xl hover:shadow-md transition overflow-hidden">
     <Image
       src={imageSrc}
       alt={name}
       width={1200}
       height={1200}
-      className="h-80 object-cover rounded-2xl"
+      className="h-80 object-cover"
     />
     <h3 className="mt-3 text-xl font-semibold">{name}</h3>
     <p className="text-gray-600">{description}</p>

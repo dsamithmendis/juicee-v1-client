@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <section className="mt-10 text-gray-800">
       <div className="flex justify-between items-center">
-        {/* Logo */}
+
         <div className="flex items-center gap-2">
           <Image
             src="/images/1.png"
@@ -16,7 +16,6 @@ export default function Header() {
           <span className="font-extrabold text-2xl">JUICEE</span>
         </div>
 
-        {/* Menu */}
         <ul className="flex gap-8 text-sm font-medium">
           <li className="hover:text-pink-600 cursor-pointer">Home</li>
           <li className="hover:text-pink-600 cursor-pointer">Menu</li>
@@ -24,8 +23,7 @@ export default function Header() {
           <li className="hover:text-pink-600 cursor-pointer">Contact</li>
         </ul>
 
-        {/* Sign Up Button */}
-        <button className="border border-gray-700 px-4 py-1.5 rounded-lg hover:bg-gray-800 hover:text-white transition">
+        <button className="border border-gray-700 px-4 py-2 rounded-lg hover:bg-gray-800 hover:text-white transition">
           Sign Up
         </button>
       </div>
