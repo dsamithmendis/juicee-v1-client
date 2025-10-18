@@ -8,7 +8,7 @@ interface JuiceCardProps {
 }
 
 const JuiceCard = ({ name, description, price, imageSrc }: JuiceCardProps) => (
-  <div className="bg-white rounded-lg shadow-md p-4 text-center">
+  <div className="rounded-lg shadow-md p-4 text-center">
     <Image
       src={imageSrc}
       alt={name}

@@ -2,9 +2,8 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="bg-[#fff7ee] text-black">
-      {/* Navbar */}
-      <nav className="flex justify-between items-center px-10 py-6">
+    <div className="bg-[#fff7ee] text-black">
+      <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <Image
@@ -29,7 +28,7 @@ export default function Header() {
         <button className="border border-gray-700 px-4 py-1.5 rounded-lg hover:bg-gray-800 hover:text-white transition">
           Sign Up
         </button>
-      </nav>
-    </header>
+      </div>
+    </div>
   );
 }
