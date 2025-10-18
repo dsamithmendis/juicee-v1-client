@@ -53,10 +53,6 @@ const JuicePage = () => (
         />
       </div>
     </div>
-
-    <footer className="text-center text-gray-600 mt-8">
-      © 2025 | All rights reserved
-    </footer>
   </div>
 );
 

@@ -1,7 +1,6 @@
 import JuicePage from "@/components/common/cards/JuicePage";
 import HeroImageCard from "@/components/common/cards/HeroImageCard";
 import FruitCard from "@/components/common/cards/FruitCard";
-import Image from "next/image";
 import React from "react";
 
 const HomePage = () => {
@@ -13,33 +12,10 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#fff7ee] to-[#fcdcc9] text-gray-800">
-      {/* Navbar */}
-      <nav className="flex justify-between items-center px-10 py-6">
-        <div className="flex items-center gap-2">
-          <Image
-            src="/images/1.png"
-            alt="logo"
-            width={32}
-            height={32}
-            className="rounded-full"
-          />
-          <span className="font-bold text-lg">Fruity</span>
-        </div>
-        <ul className="flex gap-8 text-sm font-medium">
-          <li className="hover:text-pink-600 cursor-pointer">Home</li>
-          <li className="hover:text-pink-600 cursor-pointer">Menu</li>
-          <li className="hover:text-pink-600 cursor-pointer">Features</li>
-          <li className="hover:text-pink-600 cursor-pointer">Contact</li>
-        </ul>
-        <button className="border border-gray-700 px-4 py-1.5 rounded-lg hover:bg-gray-800 hover:text-white transition">
-          Sign Up
-        </button>
-      </nav>
-
       {/* Hero Section */}
       <section className="flex flex-col lg:flex-row justify-between items-center px-10 lg:px-20 py-12">
         <div className="max-w-xl space-y-5">
-          <h1 className="text-5xl font-extrabold leading-tight text-gray-900">
+          <h1 className="max-w-2xl text-5xl font-extrabold leading-tight text-gray-900">
             Revitalize Your Routing, <br />
             <span className="text-pink-600">Fresh, Fruity, Fantastic!</span>
           </h1>
@@ -82,9 +58,7 @@ const HomePage = () => {
             {fruits.map((fruit, i) => (
               <div
                 key={i}
-                className={`w-2/7 ${
-                  i === 1 ? "relative mt-32" : ""
-                }`}
+                className={`w-2/7 ${i === 1 ? "relative mt-32" : ""}`}
               >
                 <FruitCard img={fruit.img} name={fruit.name} />
               </div>
