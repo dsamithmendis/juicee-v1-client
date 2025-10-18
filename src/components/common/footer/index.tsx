@@ -21,7 +21,7 @@ const Footer = () => (
           <p className="text-gray-600">Easy Access</p>
           <ul className="space-y-4">
             {["About Us", "Services", "Blog"].map((item) => (
-              <li key={item} className="hover:underline cursor-pointer">
+              <li key={item} className="hover:text-pink-600 cursor-pointer">
                 {item}
               </li>
             ))}
@@ -44,7 +44,7 @@ const Footer = () => (
           <div className="flex justify-center gap-4 mt-4">
             <Link
               href="#"
-              className="hover:text-pink-600 transition-colors duration-300"
+              className="hover:text-red-600 transition-colors duration-300"
               aria-label="Instagram"
             >
               <RiInstagramFill size={28} />
@@ -58,14 +58,14 @@ const Footer = () => (
             </Link>
             <Link
               href="#"
-              className="hover:text-gray-800 transition-colors duration-300"
+              className="hover:text-pink-600 transition-colors duration-300"
               aria-label="Twitter"
             >
               <RiTwitterXFill size={28} />
             </Link>
             <Link
               href="#"
-              className="hover:text-red-700 transition-colors duration-300"
+              className="hover:text-red-600 transition-colors duration-300"
               aria-label="Youtube"
             >
               <RiYoutubeFill size={28} />
