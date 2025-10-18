@@ -1,6 +1,5 @@
-import JuiceCard from "./JuiceCard";
-import ContactForm from "./contact-form";
-import Sitemap from "./Sitemap";
+import JuiceCard from "@/components/common/cards/juice-card";
+import ContactForm from "@/components/common/forms/contact-form";
 import Image from "next/image";
 
 const juices = [
@@ -24,7 +23,7 @@ const juices = [
   },
 ];
 
-const JuicePage = () => (
+const BottomSection = () => (
   <div className="mt-10 min-h-screen">
     <h1 className="text-4xl font-extrabold text-gray-800 mb-10">
       Explore Best <br className="hidden md:block" />
@@ -38,17 +37,26 @@ const JuicePage = () => (
     </div>
 
     <div className="grid md:grid-cols-4 gap-6 mb-12">
-      {/* Left Column: Contact Form */}
       <div className="col-span-1">
         <ContactForm />
       </div>
 
-      {/* Middle Column: Sitemap */}
       <div className="col-span-2">
-        <Sitemap />
+        <div className="space-y-4 text-gray-800 items-center text-center">
+          <h2 className="text-4xl font-extrabold">Sitemap</h2>
+          <p className="text-gray-600">Easy Access</p>
+          <ul className="space-y-4">
+            {["Home", "About Us", "Services", "Blog", "Contact Us"].map(
+              (item) => (
+                <li key={item} className="hover:underline cursor-pointer">
+                  {item}
+                </li>
+              )
+            )}
+          </ul>
+        </div>
       </div>
 
-      {/* Right Column: Image + Contact Info */}
       <div className="col-span-1 flex flex-col items-center justify-start p-4">
         <Image
           src="/images/1.png"
@@ -66,4 +74,4 @@ const JuicePage = () => (
   </div>
 );
 
-export default JuicePage;
+export default BottomSection;

@@ -1,4 +1,4 @@
-import FruitCard from "@/components/common/cards/FruitCard";
+import FruitCard from "@/components/common/cards/fruit-card";
 
 const WhyChooseUsSection = () => {
   const fruits = [

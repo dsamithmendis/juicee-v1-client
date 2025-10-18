@@ -1,4 +1,4 @@
-import HeroImageCard from "@/components/common/cards/HeroImageCard";
+import HeroImageCard from "@/components/common/cards/hero-image-card";
 
 export default function HeroSection() {
   return (
