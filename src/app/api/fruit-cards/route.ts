@@ -18,7 +18,7 @@ export async function GET() {
     const db = await connectToDB();
 
     const images = await db
-      .collection<ImageDoc>("images")
+      .collection<ImageDoc>("cards")
       .find({ category: "fruit-card" })
       .sort({ uploadedAt: -1 })
       .limit(3)
