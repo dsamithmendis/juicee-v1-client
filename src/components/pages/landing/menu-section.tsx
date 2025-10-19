@@ -1,27 +1,39 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import JuiceCard from "@/components/common/cards/juice-card";
 
-const juices = [
-  {
-    name: "Mango Fruit Juice",
-    description: "Mango fruit with a splash of ice.",
-    price: "180",
-    imageSrc: "/images/2.png",
-  },
-  {
-    name: "Apricot Fruit Juice",
-    description: "Creamy blend of apricot.",
-    price: "160",
-    imageSrc: "/images/3.png",
-  },
-  {
-    name: "Orange Fruit Juice",
-    description: "Sweet and rich tropical flavor.",
-    price: "150",
-    imageSrc: "/images/4.png",
-  },
-];
+interface Juice {
+  _id: string;
+  name: string;
+  title: string;
+  description: string;
+  price: number;
+  base64: string;
+}
 
 export default function MenuSection() {
+  const [juices, setJuices] = useState<Juice[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchJuices() {
+      try {
+        const res = await fetch("/api/juice-cards");
+        const data: Juice[] = await res.json();
+        setJuices(data);
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchJuices();
+  }, []);
+
+  if (loading) return <p>Loading menu...</p>;
+
   return (
     <section className="w-full mt-10">
       <h1 className="text-4xl font-extrabold text-gray-800 mb-10">
@@ -31,7 +43,13 @@ export default function MenuSection() {
 
       <div className="grid md:grid-cols-3 gap-6 mb-12">
         {juices.map((juice) => (
-          <JuiceCard key={juice.name} {...juice} />
+          <JuiceCard
+            key={juice._id}
+            name={juice.title}
+            description={juice.description}
+            price={juice.price.toString()}
+            imageSrc={juice.base64}
+          />
         ))}
       </div>
     </section>
