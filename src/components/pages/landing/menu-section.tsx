@@ -1,38 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import JuiceCard from "@/components/common/cards/juice-card";
-
-interface Juice {
-  _id: string;
-  name: string;
-  title: string;
-  description: string;
-  price: number;
-  base64: string;
-}
+import JuiceCardSkeleton from "@/components/common/skeletons/juice-card-skeleton";
+import { useJuices } from "@/hooks/useJuice";
 
 export default function MenuSection() {
-  const [juices, setJuices] = useState<Juice[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchJuices() {
-      try {
-        const res = await fetch("/api/juice-cards");
-        const data: Juice[] = await res.json();
-        setJuices(data);
-      } catch (err) {
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchJuices();
-  }, []);
-
-  if (loading) return <p>Loading menu...</p>;
+  const { juices, loading } = useJuices();
 
   return (
     <section className="w-full mt-10">
@@ -41,17 +14,25 @@ export default function MenuSection() {
         Menu Selections
       </h1>
 
-      <div className="grid md:grid-cols-3 gap-6 mb-12">
-        {juices.map((juice) => (
-          <JuiceCard
-            key={juice._id}
-            name={juice.title}
-            description={juice.description}
-            price={juice.price.toString()}
-            imageSrc={juice.base64}
-          />
-        ))}
-      </div>
+      {loading ? (
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          {Array.from({ length: 3 }).map((_, i) => (
+            <JuiceCardSkeleton key={i} />
+          ))}
+        </div>
+      ) : (
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          {juices.map((juice) => (
+            <JuiceCard
+              key={juice._id}
+              name={juice.title}
+              description={juice.description}
+              price={juice.price.toString()}
+              imageSrc={juice.base64}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 }
