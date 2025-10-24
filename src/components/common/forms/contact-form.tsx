@@ -1,7 +1,9 @@
 const ContactForm = () => (
   <form className="space-y-4 text-gray-800">
     <h2 className="text-4xl font-extrabold">Contact Us</h2>
-    <p className="text-gray-600">We would love to hear from you! Please fill out the form below.</p>
+    <p className="text-gray-600">
+      We would love to hear from you! Please fill out the form below.
+    </p>
     <input
       type="text"
       placeholder="Full Name"
