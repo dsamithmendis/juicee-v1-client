@@ -24,10 +24,10 @@ const JuiceCard = ({ name, description, price, imageSrc }: JuiceCardProps) => (
     </div>
 
     <div className="absolute inset-0 bg-black/30 flex flex-row items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl">
-      <button className="cursor-pointer hover:opacity-80 transition px-6 py-2 bg-[#FFBD43] text-white rounded-full shadow-lg">
+      <button className="cursor-pointer hover:bg-[#FFBD43] transition px-6 py-2 bg-[#FFBD43]/80 text-white rounded-full shadow-lg">
         Buy
       </button>
-      <button className="cursor-pointer hover:opacity-80 transition px-6 py-2 bg-[#FFBD43] text-white rounded-full shadow-lg">
+      <button className="cursor-pointer hover:bg-[#FFBD43] transition px-6 py-2 bg-[#FFBD43]/80 text-white rounded-full shadow-lg">
         Details
       </button>
     </div>
