@@ -18,9 +18,11 @@ const JuiceCard = ({ name, description, price, imageSrc }: JuiceCardProps) => (
     />
 
     <div className="mt-3">
-      <h3 className="text-xl font-semibold">{name}</h3>
-      <p className="text-gray-600">{description}</p>
-      <div className="mt-2 text-pink-600 font-bold">Rs. {price}/-</div>
+      <h3 className="text-xl line-clamp-1 font-semibold">{name}</h3>
+      <p className="text-gray-600 line-clamp-1">{description}</p>
+      <div className="mt-2 text-pink-600 font-bold line-clamp-1">
+        LKR. {price}/-
+      </div>
     </div>
 
     <div className="absolute inset-0 bg-black/30 flex flex-row items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl">
