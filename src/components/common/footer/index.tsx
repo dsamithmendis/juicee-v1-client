@@ -5,6 +5,8 @@ import {
   RiInstagramFill,
   RiTwitterXFill,
   RiYoutubeFill,
+  RiPhoneFill,
+  RiMailFill,
 } from "@remixicon/react";
 import Link from "next/link";
 
@@ -17,10 +19,10 @@ const Footer = () => (
 
       <div className="md:col-span-2">
         <div className="space-y-4 text-gray-800 items-center text-center">
-          <h2 className="text-4xl font-extrabold">Sitemap</h2>
-          <p className="text-gray-600">Easy Access</p>
+          <h2 className="text-4xl font-extrabold">Conditions</h2>
+          <p className="text-gray-600">Rules and regulations</p>
           <ul className="space-y-4">
-            {["About Us", "Services", "Blog"].map((item) => (
+            {["Terms of Service", "Privacy Policy", "Blog"].map((item) => (
               <li key={item} className="hover:text-pink-600 cursor-pointer">
                 {item}
               </li>
@@ -37,9 +39,13 @@ const Footer = () => (
           width={1200}
           height={1200}
         />
-        <div className="mt-4 text-gray-800 text-center space-y-4">
-          <p>📞 +123 456 789 000</p>
-          <p>📧 email@email.me</p>
+        <div className="mt-4 text-gray-800 space-y-4">
+          <p className="flex gap-2">
+            <RiPhoneFill size={20} /> +123 456 789 000
+          </p>
+          <p className="flex gap-2">
+            <RiMailFill size={20} /> juicee@gmail.com
+          </p>
 
           <div className="flex justify-center gap-4 mt-4">
             <Link
