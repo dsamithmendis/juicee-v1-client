@@ -24,7 +24,7 @@ export default function Header() {
         <ul className="hidden md:flex gap-8 text-md font-medium">
           <li className="hover:text-pink-600 cursor-pointer">Home</li>
           <li className="hover:text-pink-600 cursor-pointer">Menu</li>
-          <li className="hover:text-pink-600 cursor-pointer">Features</li>
+          <li className="hover:text-pink-600 cursor-pointer">About Us</li>
           <li className="hover:text-pink-600 cursor-pointer">Contact Us</li>
         </ul>
 
