@@ -21,7 +21,7 @@ export async function GET() {
       .collection<ImageDoc>("cards")
       .find({ category: "fruit-card" })
       .sort({ uploadedAt: -1 })
-      .limit(3)
+      .limit(10)
       .toArray();
 
     const formatted = images.map((img) => ({

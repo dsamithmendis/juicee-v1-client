@@ -11,7 +11,7 @@ export default function WhyChooseUsSection() {
     <section className="w-full mt-10">
       <div className="flex flex-col md:flex-row justify-between items-start w-full gap-10 md:gap-6">
         <div className="w-full md:w-2/7">
-          <p className="text-4xl font-extrabold mb-3">
+          <p className="text-4xl text-gray-800 font-extrabold mb-3">
             Why you
             <br className="hidden md:block" /> should
             <br className="hidden md:block" /> choose us?
