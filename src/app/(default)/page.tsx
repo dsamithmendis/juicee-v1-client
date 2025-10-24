@@ -4,13 +4,13 @@ import WhyChooseUsSection from "@/components/pages/landing/why-choose-us-section
 import MenuSection from "@/components/pages/landing/menu-section";
 import Preloader from "@/components/common/pre-loader";
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <div className="relative w-full text-gray-800">
-      <Preloader />
+    <>
+     
       <HeroSection />
       <WhyChooseUsSection />
       <MenuSection />
-    </div>
+    </>
   );
 }
