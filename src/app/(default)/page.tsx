@@ -7,7 +7,7 @@ import Preloader from "@/components/common/pre-loader";
 export default function Home() {
   return (
     <>
-     
+      <Preloader />
       <HeroSection />
       <WhyChooseUsSection />
       <MenuSection />
