@@ -16,7 +16,7 @@ const FruitCard = ({ img, name }: FruitCardProps) => {
         height={540}
         className="object-cover rounded-2xl"
       />
-      <button className="absolute bottom-4 opacity-0 group-hover:opacity-100 transition px-6 py-2 bg-[#FFBD43] text-white rounded-full shadow-lg">
+      <button className="cursor-pointer absolute bottom-4 opacity-0 group-hover:opacity-100 transition px-6 py-2 bg-[#FFBD43] text-white rounded-full shadow-lg">
         Sell
       </button>
     </div>
